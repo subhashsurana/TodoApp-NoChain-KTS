@@ -61,10 +61,6 @@ object Test1 : BuildType({
         }
     }
 
-    dependencies {
-        snapshot(TodoImage) {
-        }
-    }
 })
 
 object Test2 : BuildType({
@@ -82,10 +78,6 @@ object Test2 : BuildType({
         }
     }
 
-    dependencies {
-        snapshot(TodoImage) {
-        }
-    }
 })
 
 object TestReport : BuildType({
@@ -99,12 +91,6 @@ object TestReport : BuildType({
         showDependenciesChanges = true
     }
 
-    dependencies {
-        snapshot(Test1) {
-        }
-        snapshot(Test2) {
-        }
-    }
 })
 
 object TodoApp : BuildType({
@@ -149,23 +135,7 @@ object TodoImage : BuildType({
         }
     }
 
-    triggers {
-        vcs {
-            branchFilter = ""
-            watchChangesInDependencies = true
-        }
-    }
-
-    dependencies {
-        dependency(TodoApp) {
-            snapshot {
-            }
-
-            artifacts {
-                artifactRules = "+:todo.jar => build/libs/"
-            }
-        }
-    }
+ 
 })
 
 object TodoBackendVcs : GitVcsRoot({
