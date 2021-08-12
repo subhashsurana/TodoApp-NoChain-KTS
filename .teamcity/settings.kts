@@ -129,7 +129,7 @@ object TodoImage : BuildType({
                     path = "./docker/Dockerfile"
                 }
                 contextDir = "."
-                namesAndTags = "antonarhipov/todo-backend:%build.number%"
+                namesAndTags = "mkjetbrains/todo-backend:%build.number%"
                 commandArgs = "--pull"
             }
         }
@@ -140,5 +140,5 @@ object TodoImage : BuildType({
 
 object TodoBackendVcs : GitVcsRoot({
     name = "TodoBackendVcs"
-    url = "https://github.com/antonarhipov/todoapp-backend"
+    url = "https://github.com/mkjetbrains/todoapp-backend"
 })
