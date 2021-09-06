@@ -140,5 +140,5 @@ object TodoImage : BuildType({
 
 object TodoBackendVcs : GitVcsRoot({
     name = "TodoBackendVcs"
-    url = "https://github.com/mkjetbrains/todoapp-backend"
+    url = "https://github.com/mkjetbrains/TodoApp-NoChain-KTS"
 })
